@@ -4,7 +4,7 @@ import threading
 port = 5605
 server_address = ('127.0.0.1', port)
 
-def threaded(conn, addr):     #conn da el client socket w addr el address bta3o
+def threaded(conn, addr):     
     print("NEW CONNECTION: " + str(addr) + " connected.")
     while True:
         message = conn.recv(1024).decode()
@@ -27,10 +27,10 @@ def main():
     while True:
         conn, addr = server_socket.accept()
 
-        client_thread = threading.Thread(target=threaded, args=(conn, addr))  #create new thread
-        client_thread.start()  #will start
+        client_thread = threading.Thread(target=threaded, args=(conn, addr))  
+        client_thread.start()  
 
         print("ACTIVE CONNECTIONS: " + str(threading.active_count() - 1))
 
 if __name__ == "__main__":
-    main()    #run main function bas
+    main()    
