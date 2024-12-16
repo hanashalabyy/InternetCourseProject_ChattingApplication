@@ -2,7 +2,7 @@ In Milestone 0 , You are required to build a chatting application designed over 
 network composed of one client and a server. The chatting application should feature
 the following:
 1. The client chats with the server at any time.
-2. The server responds with the same message sent by the corresponding client in CAPITALIZED format.
+2. The server responds with the same message sent by the corresponding client in CAPITALIZED format.
 3. The connection between any client and server stays open until the client sends to the server
 a message contains CLOSE SOCKET then the connection between the server and the client
 closes.
